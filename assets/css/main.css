@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "trashhand";
+    src        : url( "../fonts/trashhand.TTF" )
+}
+
+header{
+    background-image: url( "../img/img1.jpg" )
+}
+
+header h1{
+    font-family: "trashhand"
+}
