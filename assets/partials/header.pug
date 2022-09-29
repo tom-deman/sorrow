@@ -1,3 +1,36 @@
-header.bg-center.h-screen.flex.px-8.justify-center.items-center
-    h1.text-white.text-9xl Tom Torment
-        p.mt-16.text-center "Sorrow"
+-
+    const platforms = [
+        {
+            name : 'Youtube',
+            color: 'text-red-600',
+            link : ''
+        },
+        {
+            name : 'Soundcloud',
+            color: 'text-orange-600',
+            link : ''
+        }
+    ];
+
+
+header.bg-center.h-screen.flex.flex-col.px-8.justify-center.items-center.relative
+
+    h1.text-neutral-200.-mt-24.animate__animated.animate__fadeInDown Tom Torment
+        p.text-center "Sorrow"
+    .flex.justify-between.text-neutral-200.mt-10( class = 'w-1/6' )
+
+        each element in platforms
+            a(
+                class  = `hover:${ element.color } cursor-pointer`
+                href   = element.link
+                target = '_blank'
+                rel    = 'noopener noreferrer'
+            )
+                .flex.flex-col.items-center.animate__animated.animate__fadeIn.animate__delay-1s
+                    i( class = `fa-brands fa-${ element.name.toLowerCase() } text-5xl` )
+                    p.font-light.tracking-widest.text-sm.mt-5= element.name
+
+    a( href = '#listen' ): i(
+        class = 'fa-solid fa-chevron-down text-gray-300 text-xl font-light absolute bottom-12 border border-gray-400 rounded-full p-3 cursor-pointer hover:border-gray-300 hover:text-gray-200 animate__animated animate__fadeIn animate__delay-1s'
+        style = 'left: 50%; transform: translateX( -50% );'
+    )
