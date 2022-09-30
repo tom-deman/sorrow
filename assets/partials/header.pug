@@ -2,12 +2,12 @@
     const platforms = [
         {
             name : 'Youtube',
-            color: 'text-red-600',
+            color: 'hover:text-red-600',
             link : ''
         },
         {
             name : 'Soundcloud',
-            color: 'text-orange-600',
+            color: 'hover:text-orange-600',
             link : ''
         }
     ];
@@ -21,7 +21,7 @@ header.bg-center.h-screen.flex.flex-col.px-8.justify-center.items-center.relativ
 
         each element in platforms
             a(
-                class  = `hover:${ element.color } cursor-pointer`
+                class  = `${ element.color } cursor-pointer`
                 href   = element.link
                 target = '_blank'
                 rel    = 'noopener noreferrer'
@@ -30,7 +30,7 @@ header.bg-center.h-screen.flex.flex-col.px-8.justify-center.items-center.relativ
                     i( class = `fa-brands fa-${ element.name.toLowerCase() } text-5xl` )
                     p.font-light.tracking-widest.text-sm.mt-5= element.name
 
-    a( href = '#listen' ): i(
+    a( href = '#tracklist' ): i(
         class = 'fa-solid fa-chevron-down text-gray-300 text-xl font-light absolute bottom-12 border border-gray-400 rounded-full p-3 cursor-pointer hover:border-gray-300 hover:text-gray-200 animate__animated animate__fadeIn animate__delay-1s'
         style = 'left: 50%; transform: translateX( -50% );'
     )

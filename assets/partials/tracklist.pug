@@ -1,0 +1,22 @@
+-
+    const tracklist = [
+        'Intro',
+        'Riding through the city at night',
+        'It rains where you are not',
+        'Interlude',
+        'Leaving',
+        'When will you realize'
+    ];
+
+section#tracklist.px-32.flex( style = 'margin-top: 8rem' )
+    .flex.justify-end.pr-12( class = 'w-1/2' )
+        img.mt-10(
+            src = './assets/img/img2.jpg'
+            alt = ''
+        )
+    .text-neutral-200.font-light( class = 'w-1/2' )
+        h2.text-lg Tom Torment - Sorrow
+        ul.mt-4
+            each el, index in tracklist
+                li.my-4= `${ index + 1 }. ${ el }`
+        p.mt-12.text-xs Everything written and produced by Tom Torment
