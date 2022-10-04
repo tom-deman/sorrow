@@ -20,17 +20,17 @@ header.bg-center.h-screen.flex.flex-col.px-8.justify-center.items-center.relativ
     .flex.justify-between.text-neutral-200.mt-10( class = 'w-1/6' )
 
         each element in platforms
-            a(
-                class  = `${ element.color } cursor-pointer`
+            a.cursor-pointer(
+                class  = `${ element.color }`
                 href   = element.link
                 target = '_blank'
                 rel    = 'noopener noreferrer'
             )
                 .flex.flex-col.items-center.animate__animated.animate__fadeIn.animate__delay-1s
-                    i( class = `fa-brands fa-${ element.name.toLowerCase() } text-5xl` )
+                    i.fa-brands.text-5xl( class = `fa-${ element.name.toLowerCase() }` )
                     p.font-light.tracking-widest.text-sm.mt-5= element.name
 
-    a( href = '#tracklist' ): i(
-        class = 'fa-solid fa-chevron-down text-gray-300 text-xl font-light absolute bottom-12 border border-gray-400 rounded-full p-3 cursor-pointer hover:border-gray-300 hover:text-gray-200 animate__animated animate__fadeIn animate__delay-1s'
+    a( href = '#tracklist' ): i.fa-solid.fa-chevron-down.text-gray-300.text-xl.font-light.absolute.bottom-12.border.border-gray-400.rounded-full.p-3.cursor-pointer(
+        class = 'hover:border-gray-300 hover:text-gray-200 animate__animated animate__fadeIn animate__delay-1s'
         style = 'left: 50%; transform: translateX( -50% );'
     )
