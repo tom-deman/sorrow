@@ -8,15 +8,15 @@
         'When will you realize'
     ];
 
-section#tracklist.px-32.flex( style = 'margin-top: 10rem' )
-    .flex.justify-end.pr-12( class = 'w-1/2' )
+section#tracklist.flex.flex-wrap( class = 'lg:px-32 px-8' )
+    .flex.w-full.justify-center.pr-0( class = 'lg:w-1/2 lg:justify-end lg:pr-12' )
         img.mt-10(
             src = './assets/img/img2.jpg'
-            alt = ''
+            alt = 'album cover'
         )
-    .text-neutral-200.font-light( class = 'w-1/2' )
+    .text-neutral-200.font-light.w-full.mt-10( class = 'lg:w-1/2 lg:mt-0' )
         h2.text-lg Tom Torment - Sorrow
         ul.mt-4
             each el, index in tracklist
-                li.my-4= `${ index + 1 }. ${ el }`
+                li.my-4.font-thin( class = 'lg:font-light' )= `${ index + 1 }. ${ el }`
         p.mt-12.text-xs Everything written and produced by Tom Torment

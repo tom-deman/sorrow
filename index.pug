@@ -2,7 +2,10 @@ doctype html
 html( lang = 'en' )
     include ./assets/partials/head
     body.bg-neutral-900
-        a( href = '#' )
+        a.hidden(
+            href  = '#'
+            class = 'lg:block'
+        )
             i.fa-sharp.fa-chevron-up.fa-solid.fixed.right-10.bottom-8.text-neutral-200.text-lg( class = 'hover:text-white' )
         include ./assets/partials/header
         include ./assets/partials/tracklist
