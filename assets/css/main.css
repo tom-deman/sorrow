@@ -55,3 +55,21 @@ section#tracklist {
         margin: 6rem 0 4rem 0
     }
 }
+
+@media only screen and ( max-width: 992px ) and ( min-width: 768px ) {
+    header h1 {
+        font-size: 8rem
+    }
+
+    #listen iframe {
+        height: 50vh
+    }
+
+    #listen iframe:first-child {
+        margin-top: 10rem
+    }
+
+    #listen iframe:nth-child( 2 ) {
+        margin: 6rem 0 4rem 0
+    }
+}
